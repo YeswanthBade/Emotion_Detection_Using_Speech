@@ -42,7 +42,8 @@ def extract_feature(file_name, mfcc, chroma, mel):
     return result
 def load_data(test_size=0.25):
     x, y = [], []
-    for file in glob.glob("C:\\Users\\Viya\\Downloads\\project\\project\\dataset\\speech-emotion-recognition-ravdess-data\\Actor_*\\*.wav"):
+        #'C:\\Users\\Viya\\Desktop\\Emotion_Detection_Using_Speech\\SER'change this part to your dataset path
+    for file in glob.glob("C:\\Users\\Viya\\Desktop\\Emotion_Detection_Using_Speech\\SER\\speech-emotion-recognition-ravdess-data\\Actor_*\\*.wav"):
         file_name = os.path.basename(file)
         emotion = emotions[file_name.split("-")[2]]
         if emotion not in observed_emotions:
